@@ -23,7 +23,8 @@ module Puppet::Provider::Openstack::Auth
     unless cloudsfile.nil?
       {
         'OS_CLOUD'              => scope,
-        'OS_CLIENT_CONFIG_FILE' => cloudsfile
+        'OS_CLIENT_CONFIG_FILE' => cloudsfile,
+        'OS_INTERFACE'          => 'internal'
       }
     else
       {}
